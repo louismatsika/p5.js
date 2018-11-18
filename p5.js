@@ -13,6 +13,14 @@ var col = {
 
 };
 
+function mousePressed(){
+    background(0)
+ if (mouseY > 200){
+    background(255)
+  };
+}
+
+
 function setup() {
   createCanvas(600, 400);
   background(0, 0, 0);
@@ -33,6 +41,8 @@ function draw() {
   fill(col.r, col.g, col.b, col.a);
   ellipse(cir.x, cir.y, cir.diameter);
 
-
-
 }
+
+
+
+
