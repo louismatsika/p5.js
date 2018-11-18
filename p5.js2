@@ -1,0 +1,34 @@
+var speed = 3;
+
+var r = 0;
+
+var cir = {
+
+  x: 300,
+  y: 200,
+  diameter: 90,
+};
+
+function setup() {
+
+  createCanvas(600, 400);
+}
+
+function draw() {
+
+  background(0, 0, 0);
+
+  noStroke();
+  fill(r, 0, 200);
+  
+  map(r, 0, 255, 0, 400);
+
+  ellipse(cir.x, cir.y, cir.diameter);
+  if (cir.y > height - cir.diameter / 2 || cir.y < 0 + cir.diameter / 2 ){
+    speed = speed * -1
+  }
+  cir.y = cir.y + speed
+  r = cir.y
+
+
+}
